@@ -1,6 +1,6 @@
 package com.niteshmishra.project.Lovable.entity;
 
-import com.niteshmishra.project.Lovable.Enums.ProjectRoles;
+import com.niteshmishra.project.Lovable.Enums.MessageRole;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,14 +11,18 @@ import java.time.Instant;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
+public class ChatMessage {
+    Long id;
 
-public class ProjectMember {
+    ChatSession chatSession;
 
-    ProjectMemberId id;
-    Project project;
-    User user;
-    ProjectRoles projectRole;
+    String content;
 
-    Instant invitedAt;
-    Instant acceptedAt;
+    MessageRole role;
+
+    String toolCalls;
+    Integer tokenUsed;
+
+    Instant createdAt;
+
 }

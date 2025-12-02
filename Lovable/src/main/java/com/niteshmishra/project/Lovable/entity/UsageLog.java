@@ -1,6 +1,5 @@
 package com.niteshmishra.project.Lovable.entity;
 
-import com.niteshmishra.project.Lovable.Enums.ProjectRoles;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,13 +11,18 @@ import java.time.Instant;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
-public class ProjectMember {
+public class UsageLog {
+    Long id;
 
-    ProjectMemberId id;
     Project project;
     User user;
-    ProjectRoles projectRole;
 
-    Instant invitedAt;
-    Instant acceptedAt;
+    String action;
+    Integer tokensUsed;
+    Integer durationMs;
+
+    String metaData;
+
+    Instant createdAt;
+
 }
