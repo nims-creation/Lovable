@@ -21,11 +21,12 @@ public class authController {
     @PostMapping("/signup")
     public Repository<AuthResponse> signup(SignupRequest request){
         return ResponseEntity.ok(authService.signup(request))
-    }git
+    }
 
     @PostMapping("/login")
     public Repository<AuthResponse> login(LoginRequest request){
-        return ResponseEntity.ok(authService.(login(request)))
+        Repository login = login(request);
+        return ResponseEntity.ok((login(request)))
     }
 
 }
